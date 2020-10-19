@@ -1,0 +1,11 @@
+{
+  "name": "microverse-forms-bot",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "playwright": "^1.5.1",
+    "yamljs": "^0.3.0"
+  }
+}

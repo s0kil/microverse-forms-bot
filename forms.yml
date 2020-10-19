@@ -1,0 +1,49 @@
+standup:
+  # Did you achieve your goals from yesterday?
+  achievedGoals: Yes, all of them
+
+  # What went well today?
+  upsides: Everything Went Great Today
+
+  # What (if anything) blocked you from achieving your goals today?
+  blockers:
+    {
+      1: None,
+      2: Coding Partner Issues,
+      3: Personal Problems,
+      4: Financial Problems,
+      5: Not reaching out for help from others,
+      6: Low Productivity,
+      7: Low Confidence,
+      9: High Stress Levels,
+      10: Tiredness,
+      11: Low Understanding of Topic,
+      12: Low English Ability,
+      13: Poor Time Management,
+      14: Low Motivation,
+      15: Being Absent,
+      16: Illness,
+      17: Electricity Problems,
+      18: Internet Problems,
+      19: Hardware Issues,
+      20: Waiting for Re-pair,
+      21: Working Alone,
+      22: Problematic Code Reviews,
+      23: Waiting for Code Reviews,
+      24: Inadequate Learning Materials,
+    }
+  selectedBlockers:
+    - 1
+
+  # What are your three goals for tomorrow?
+  goals:
+    - Learn More Ruby
+    - Become Better With Rails
+    - Improve Communication Skills
+
+  # What will you do tomorrow to ensure you reach your goals?
+  goalsConfidence: Daily Routine
+
+  # What was your overall motivation level today?
+  motivationLevels: { 1: 😃, 2: 🙂, 3: 😐, 4: 🙁 }
+  motivationLevel: 1
