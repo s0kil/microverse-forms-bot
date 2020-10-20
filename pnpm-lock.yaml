@@ -1,4 +1,5 @@
 devDependencies:
+  cli-select: 1.1.2
   dotenv: 8.2.0
   playwright-chromium: 1.5.1
   yamljs: 0.3.0
@@ -24,6 +25,12 @@ packages:
       node: '>= 6.0.0'
     resolution:
       integrity: sha512-01q25QQDwLSsyfhrKbn8yuur+JNw0H+0Y4JiGIKd3z9aYk/w/2kxD/Upc+t2ZBBSUNff50VjPsSW2YxM8QYKVg==
+  /ansi-escapes/3.2.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-cBhpre4ma+U0T1oM5fXg7Dy1Jw7zzwv7lt/GoCpr+hDQJoYnKVPLL4dCvSEFMmQurOQvSrwT7SL/DAlhBI97RQ==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -45,6 +52,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
+  /cli-select/1.1.2:
+    dependencies:
+      ansi-escapes: 3.2.0
+    dev: true
+    resolution:
+      integrity: sha512-PSvWb8G0PPmBNDcz/uM2LkZN3Nn5JmhUl465tTfynQAXjKzFpmHbxStM6X/+awKp5DJuAaHMzzMPefT0suGm1w==
   /concat-map/0.0.1:
     dev: true
     resolution:
@@ -282,6 +295,7 @@ packages:
     resolution:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
+  cli-select: ^1.1.2
   dotenv: ^8.2.0
   playwright-chromium: ^1.5.1
   yamljs: ^0.3.0

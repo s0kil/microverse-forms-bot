@@ -9,9 +9,7 @@ const forms = YAML.load(config.FORMS_FILE);
 // Form Submiters
 import submitStandupForm from "./forms/standup.js";
 
-(async () => {
-  utilities.showMessage("Starting Microverse Forms Bot");
-
+export async function main(formHandlerName) {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
@@ -26,7 +24,20 @@ import submitStandupForm from "./forms/standup.js";
     await utilities.saveSession(context); // Save New Session
   }
 
-  await submitStandupForm(page, forms["standup"]);
+  // Submit Selected Form
+  switch (formHandlerName) {
+    case "codeReview":
+      utilities.showMessage(`${formHandlerName} Form Not Implemented`);
+      break;
+    case "algorithms":
+      utilities.showMessage(`${formHandlerName} Form Not Implemented`);
+      break;
+    case "standup":
+      await submitStandupForm(page, forms["standup"]);
+      break;
+    default:
+      break;
+  }
 
   await page.screenshot({
     path: "dashboard.jpg",
@@ -37,7 +48,7 @@ import submitStandupForm from "./forms/standup.js";
 
   utilities.showMessage("Done, Goodbye");
   await browser.close();
-})();
+}
 
 const dashboardLogin = async (page) => {
   utilities.showMessage(`Logging In As ${config.DASHBOARD.EMAIL}`);
