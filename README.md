@@ -8,6 +8,8 @@ Install dependencies: `npm install`
 
 To submit form, run: `npm start`
 
+Choose form to submit, and press enter/return.
+
 #### Extra
 
 - Check the `dashboard.jpg` image to see if your submission went through.
