@@ -1,13 +1,13 @@
 import YAML from "yamljs";
 import playwright from "playwright";
 
-import config from "./config.mjs";
-import * as utilities from "./utilities.mjs";
+import config from "./config.js";
+import * as utilities from "./utilities.js";
 
 const forms = YAML.load(config.FORMS_FILE);
 
 // Form Submiters
-import submitStandupForm from "./forms/standup.mjs";
+import submitStandupForm from "./forms/standup.js";
 
 (async () => {
   const browser = await playwright["chromium"].launch();

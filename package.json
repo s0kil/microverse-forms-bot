@@ -1,7 +1,8 @@
 {
   "name": "microverse-forms-bot",
+  "type": "module",
   "scripts": {
-    "start": "node source/main.mjs"
+    "start": "node source/main"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

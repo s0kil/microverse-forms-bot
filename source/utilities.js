@@ -1,6 +1,6 @@
 import fs, { promises as fsp } from "fs";
 
-import config from "./config.mjs";
+import config from "./config.js";
 
 export const restoreSession = async (context) => {
   const cookiesFileExists = await fsp

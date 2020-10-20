@@ -1,4 +1,4 @@
-import config from "../config.mjs";
+import config from "../config.js";
 
 export default async (page, form) => {
   await page.goto(config.DASHBOARD.PAGES.STANDUP_FORM);
