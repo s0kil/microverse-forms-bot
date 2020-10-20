@@ -47,3 +47,57 @@ standup:
   # What was your overall motivation level today?
   motivationLevels: { 1: 😃, 2: 🙂, 3: 😐, 4: 🙁 }
   motivationLevel: 1
+
+codeReview:
+  # Please select your role during this Morning Session.
+  roles: { 0: Master of the meeting, 1: Presenter, 2: Code Reviewer }
+  selectedRoles: 1
+
+  # Did the presenter speak loud enough? Yes/No
+  presenterLoudEnough: Yes
+
+  # Presenter performance - on a scale of 1-5 (1 - very difficult, 5 -very easy), how easy it was to understand the presenter's wording?
+  presenterWordingRating: 1
+
+  # Did the presenter provide a clear description of the project context?
+  projectContextDescriptionOptions:
+    {
+      0: "Yes, the presentation was well structured and easy to follow.",
+      1: "Yes, but we needed to ask a few additional questions.",
+      2: "Not really, we needed to ask a lot of questions to guide the presenter.",
+      3: "Not at all, the impression was that presenter is not talking about their own work.",
+    }
+  projectContextDescription: 0
+
+  # Did the presenter give a clear presentation of the code?
+  codeDescriptionOptions:
+    {
+      0: "Yes, the presentation was well structured and easy to follow.",
+      1: "Yes, but we needed to ask a few additional questions.",
+      2: "Not really, we needed to ask a lot of questions to guide the presenter.",
+      3: "Not at all, the impression was that presenter is not talking about their own work.",
+    }
+  codeDescription: 1
+
+  # How did the presenter respond to the given feedback?
+  feedbackResponseOptions:
+    {
+      0: "The presenter was super happy because they were stuck and given feedback help them to move forward.",
+      1: "The presenter was happy to discover some room for improvements.",
+      2: "The presenter was unhappy with the given feedback but was discussing it in a polite way.",
+      3: "The presenter was unhappy with given feedback and rude to other team members.",
+    }
+  feedbackResponse: 1
+
+  # Please enter the link to a Github issue you created with your team.
+  githubLink: https://github.com/danielsokil/rails-micro-reddit/issues/2
+
+  # How would you rate this Morning Session?
+  overallRatingOptions: { 0: 😃, 1: 🙂, 2: 😐, 3: 🙁 }
+  overallRating: 1
+
+  # Do you have anything you’d like to add about this Morning Session? (Optional)
+  comments: It was okay.
+
+algorithms:
+  TODO: true

@@ -4,7 +4,7 @@ import { showMessage } from "../utilities.js";
 export default async (page, form) => {
   showMessage("Submitting Standup Form");
 
-  await page.goto(config.DASHBOARD.PAGES.STANDUP_FORM);
+  await page.goto(config.DASHBOARD.PAGES.STANDUP);
 
   await page.selectOption(
     "select[name='standup[achieved_goals]']",

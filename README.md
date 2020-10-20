@@ -6,7 +6,7 @@ Fill out and choose the form contents in `forms.yml` file.
 
 Install dependencies: `npm install`
 
-To submit standup form, run: `npm start`
+To submit form, run: `npm start`
 
 #### Extra
 

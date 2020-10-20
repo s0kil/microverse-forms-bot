@@ -8,6 +8,8 @@ const forms = YAML.load(config.FORMS_FILE);
 
 // Form Submiters
 import submitStandupForm from "./forms/standup.js";
+import submitAlgorithmsForm from "./forms/algorithms.js";
+import submitCodeReviewForm from "./forms/codeReview.js";
 
 export async function main(formHandlerName) {
   const browser = await chromium.launch();
@@ -27,15 +29,13 @@ export async function main(formHandlerName) {
   // Submit Selected Form
   switch (formHandlerName) {
     case "codeReview":
-      utilities.showMessage(`${formHandlerName} Form Not Implemented`);
+      await submitCodeReviewForm(page, forms["codeReview"]);
       break;
     case "algorithms":
-      utilities.showMessage(`${formHandlerName} Form Not Implemented`);
+      await submitAlgorithmsForm(page, forms["algorithms"]);
       break;
     case "standup":
       await submitStandupForm(page, forms["standup"]);
-      break;
-    default:
       break;
   }
 

@@ -14,7 +14,9 @@ config.DASHBOARD = {
 };
 
 config.DASHBOARD.PAGES = {
-  STANDUP_FORM: `${config.DASHBOARD.URL}/standups/new`,
+  STANDUP: `${config.DASHBOARD.URL}/standups/new`,
+  ALGORITHMS: `${config.DASHBOARD.URL}/algorithm_sessions/new`,
+  CODE_REVIEW: `${config.DASHBOARD.URL}/code_review_sessions/new`,
 };
 
 export default config;
