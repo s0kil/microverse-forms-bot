@@ -50,8 +50,17 @@ export default async (page, form) => {
 
   await submitForm(page);
 
-  showMessage("Check dashboard.jpg Image To Be Sure If Form Was Submitted");
-
-  // TODO: Add Validation, Error Handling
-  // await validateSubmission(page, "Thank you for submitting Standup Form!")
+  const errorMessage = await page.$("p.inline-error-messages");
+  if (errorMessage) {
+    if (
+      (await errorMessage.textContent()) ===
+      "Standup was already submitted for the selected day."
+    ) {
+      showMessage("Standup Form Was Already Submitted");
+    } else {
+      showMessage("Form Failed To Submit");
+    }
+  } else {
+    await validateSubmission(page, "Thank you for submitting Standup Form!");
+  }
 };

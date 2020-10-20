@@ -8,7 +8,10 @@ export const restoreSession = async (context) => {
     .then(() => true)
     .catch(() => false);
 
-  if (!cookiesFileExists) return; // New Session
+  if (!cookiesFileExists) {
+    showMessage("Starting New Session");
+    return; // New Session
+  }
 
   showMessage("Restoring Previous Session");
 
