@@ -10,6 +10,11 @@ To submit form, run: `npm start`
 
 Choose form to submit, and press enter/return.
 
+## Forms Supported
+
+- Morning Code Review
+- Evening Standup
+
 #### Extra
 
 - Check the `dashboard.jpg` image to see if your submission went through.
