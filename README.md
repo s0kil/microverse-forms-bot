@@ -12,8 +12,9 @@ Choose form to submit, and press enter/return.
 
 ## Forms Supported
 
-- Morning Code Review
-- Evening Standup
+- Peer-To-Peer Code Review
+- Mob Programming
+- Daily Standup
 
 #### Extra
 

@@ -100,4 +100,55 @@ codeReview:
   comments: It was okay.
 
 algorithms:
-  TODO: true
+  # Please select your role during this Morning Session.
+  roles: { 0: Master of the meeting, 1: Presenter, 2: Code Reviewer }
+  role: 1
+
+  # Did the presenter speak loud enough? Yes/No
+  presenterLoudEnough: Yes
+
+  # Presenter performance - on a scale of 1-5 (1 - very difficult, 5 -very easy), how easy it was to understand the presenter's wording?
+  presenterWordingRating: 1
+
+  # Was the presenter fluent in writing the code in real-time?
+  realTimeCodeOptions:
+    {
+      0: "Yes, code writing and thinking aloud went really smooth.",
+      1: "Yes, but it was clear that the presenter is really stressed.",
+      2: "Not at all, the impression was that presenter has no idea what are they talking about.",
+    }
+  realTimeCode: 0
+
+  # Did the presenter use real-life help from other students? Yes/No
+  realLifeHelp: Yes
+
+  # Was the presenter NOT afraid to ask for help from other teammates if they were stuck?
+  askForHelpOptions:
+    { 0: "Yes", 1: "No", 3: "They were not stuck at any point" }
+  askForHelp: 0
+
+  # Did the presenter try the solution with examples? Yes/No
+  solutionWithExamples: Yes
+
+  # Did the presenter remember about the efficiency of their solution? Yes/No
+  solutionEfficiency: Yes
+
+  # How did the presenter respond to the given feedback?
+  feedbackResponseOptions:
+    {
+      0: "The presenter was happy to discover some room for improvements.",
+      1: "The presenter was unhappy with the given feedback but was discussing it in a polite way.",
+      2: "The presenter was unhappy with given feedback and rude to other team members.",
+    }
+  feedbackResponse: 0
+
+  # Please select a coding challenge that was used during the session.
+  # Use the `id` of the coding challenge (found in coding-challenges.json file)
+  codingChallenge: "recEAfcm4ThnPEPxx"
+
+  # How would you rate this Morning Session?
+  overallRatingOptions: { 0: 😃, 1: 🙂, 2: 😐, 3: 🙁 }
+  overallRating: 1
+
+  # Do you have anything you’d like to add about this Morning Session? (Optional)
+  comments: Coding Challenge was interesting.
