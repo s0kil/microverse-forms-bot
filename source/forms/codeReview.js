@@ -59,4 +59,13 @@ export default async (page, form) => {
     page.click("input[name='commit'][type='submit'][value='Submit']"),
     page.waitForNavigation(), // Wait Until Form Submitted
   ]);
+
+  const alert = await page.textContent("div.alert.alert-success");
+  if (
+    alert === "Thank you for submitting Peer-To-Peer Code Review Session Form."
+  ) {
+    showMessage("Form Submitted.");
+  } else {
+    showMessage("Form Submission Failed.");
+  }
 };
