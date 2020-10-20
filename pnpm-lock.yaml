@@ -1,6 +1,6 @@
 devDependencies:
   dotenv: 8.2.0
-  playwright: 1.5.1
+  playwright-chromium: 1.5.1
   yamljs: 0.3.0
 lockfileVersion: 5.1
 packages:
@@ -177,7 +177,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-elfrVQpng/kRUzH89GY9XI4AelA=
-  /playwright/1.5.1:
+  /playwright-chromium/1.5.1:
     dependencies:
       debug: 4.2.0
       extract-zip: 2.0.1
@@ -195,7 +195,7 @@ packages:
       node: '>=10.17.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-FYxrQ2TAmvp5ZnBnc6EJHc1Vt3DmXx8xVDq6rxVVG4YVoNKHYMarHI92zGyDlueN2kKCavrhk4Et9w6jJ5XWaA==
+      integrity: sha512-vHdharsayzNllw31ysiC5Ml11m2cGleZ5SKcUzxHDAy2t8zF3W9aMwz5H1eveoSrexKgMNKrilNJZWQODZzc3g==
   /pngjs/5.0.0:
     dev: true
     engines:
@@ -283,5 +283,5 @@ packages:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
   dotenv: ^8.2.0
-  playwright: ^1.5.1
+  playwright-chromium: ^1.5.1
   yamljs: ^0.3.0

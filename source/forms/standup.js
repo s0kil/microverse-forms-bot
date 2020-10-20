@@ -1,6 +1,8 @@
 import config from "../config.js";
 
 export default async (page, form) => {
+  console.info("Submitting Standup Form...");
+
   await page.goto(config.DASHBOARD.PAGES.STANDUP_FORM);
 
   await page.selectOption(

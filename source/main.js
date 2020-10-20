@@ -1,5 +1,5 @@
 import YAML from "yamljs";
-import playwright from "playwright";
+import { chromium } from "playwright-chromium";
 
 import config from "./config.js";
 import * as utilities from "./utilities.js";
@@ -10,7 +10,9 @@ const forms = YAML.load(config.FORMS_FILE);
 import submitStandupForm from "./forms/standup.js";
 
 (async () => {
-  const browser = await playwright["chromium"].launch();
+  console.info("Starting Microverse Forms Bot...");
+
+  const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
 
