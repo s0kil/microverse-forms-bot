@@ -24,15 +24,11 @@ export default async (page, form) => {
   for (const index in goals) {
     const goalId = Number(index) + 1; // Start From 1 Instead Of 0
 
-    // console.log(goalId, goals[index]);
-
     await page.fill(
       `input[name='standup[goals][]'][type='text'][id='goals_${goalId}']`,
       `${goals[index]}`
     );
   }
-
-  // return
 
   await page.fill(
     "textarea[name='standup[goals_confidence]']",
