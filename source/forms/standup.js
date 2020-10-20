@@ -1,17 +1,20 @@
 import config from "../config.js";
 import { showMessage } from "../utilities.js";
+import { submitForm } from "../helpers.js";
 
 export default async (page, form) => {
+  const name = (n) => `name='standup[${n}]'`;
+
   showMessage("Submitting Standup Form");
 
   await page.goto(config.DASHBOARD.PAGES.STANDUP);
 
   await page.selectOption(
-    "select[name='standup[achieved_goals]']",
+    `select[${name("achieved_goals")}]`,
     form["achievedGoals"]
   );
 
-  await page.fill("textarea[name='standup[upsides]']", form["upsides"]);
+  await page.fill(`textarea[${name("upsides")}]`, form["upsides"]);
 
   const blockers = form["selectedBlockers"].map(
     (blockerId) => form["blockers"][String(blockerId)]
@@ -34,7 +37,7 @@ export default async (page, form) => {
   }
 
   await page.fill(
-    "textarea[name='standup[goals_confidence]']",
+    `textarea[${name("goals_confidence")}]`,
     form["goalsConfidence"]
   );
 
@@ -42,18 +45,13 @@ export default async (page, form) => {
     form["motivationLevels"][String(form["motivationLevel"])];
 
   await page.check(
-    `input[name='standup[motivation]'][type='radio'][value='${motivationSelection}']`
+    `input[${name("motivation")}][type='radio'][value='${motivationSelection}']`
   );
 
-  await Promise.all([
-    page.click("input[name='commit'][type='submit'][value='Submit']"),
-    page.waitForNavigation(), // Wait Until Form Submitted
-  ]);
+  await submitForm(page);
 
-  // const alert = await page.textContent("div.alert.alert-success");
-  // if (alert === "Thank you for submitting Standup Form!") {
-  //   showMessage("Form Submitted.");
-  // } else {
-  //   showMessage("Form Submission Failed.");
-  // }
+  showMessage("Check dashboard.jpg Image To Be Sure If Form Was Submitted");
+
+  // TODO: Add Validation, Error Handling
+  // await validateSubmission(page, "Thank you for submitting Standup Form!")
 };
