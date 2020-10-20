@@ -10,7 +10,7 @@ const forms = YAML.load(config.FORMS_FILE);
 import submitStandupForm from "./forms/standup.js";
 
 (async () => {
-  console.info("Starting Microverse Forms Bot...");
+  utilities.showMessage("Starting Microverse Forms Bot");
 
   const browser = await chromium.launch();
   const context = await browser.newContext();
@@ -35,10 +35,13 @@ import submitStandupForm from "./forms/standup.js";
     type: "jpeg",
   });
 
+  utilities.showMessage("Done, Goodbye");
   await browser.close();
 })();
 
 const dashboardLogin = async (page) => {
+  utilities.showMessage(`Logging In As ${config.DASHBOARD.EMAIL}`);
+
   const emailSelector = "input[name='email'][type='email'][aria-label='Email']";
   const passwordSelector =
     "input[name='password'][type='password'][aria-label='Password']";

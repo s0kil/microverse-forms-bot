@@ -10,11 +10,19 @@ export const restoreSession = async (context) => {
 
   if (!cookiesFileExists) return; // New Session
 
+  showMessage("Restoring Previous Session");
+
   const cookies = await fsp.readFile(config.COOKIES_FILE);
   await context.addCookies(JSON.parse(cookies));
 };
 
 export const saveSession = async (context) => {
+  showMessage("Saving New Session");
+
   const cookies = await context.cookies();
   await fsp.writeFile(config.COOKIES_FILE, JSON.stringify(cookies));
+};
+
+export const showMessage = (message) => {
+  console.info(`MFB> ${message}`);
 };

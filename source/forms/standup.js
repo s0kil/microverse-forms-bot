@@ -1,7 +1,8 @@
 import config from "../config.js";
+import { showMessage } from "../utilities.js";
 
 export default async (page, form) => {
-  console.info("Submitting Standup Form...");
+  showMessage("Submitting Standup Form");
 
   await page.goto(config.DASHBOARD.PAGES.STANDUP_FORM);
 
