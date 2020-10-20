@@ -51,16 +51,6 @@ export default async (page, form) => {
   await submitForm(page);
 
   const errorMessage = await page.$("p.inline-error-messages");
-  if (errorMessage) {
-    if (
-      (await errorMessage.textContent()) ===
-      "Standup was already submitted for the selected day."
-    ) {
-      showMessage("Standup Form Was Already Submitted");
-    } else {
-      showMessage("Form Failed To Submit");
-    }
-  } else {
-    await validateSubmission(page, "Thank you for submitting Standup Form!");
-  }
+  if (errorMessage) showMessage(await errorMessage.textContent());
+  else await validateSubmission(page, "Thank you for submitting Standup Form!");
 };
