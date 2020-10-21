@@ -1,6 +1,6 @@
 import config from "../config.js";
 import { showMessage } from "../utilities.js";
-import { submitForm } from "../helpers.js";
+import { validateSubmission, submitForm } from "../helpers.js";
 
 export default async (page, form) => {
   const name = (n) => `name='standup[${n}]'`;
