@@ -1,30 +1,30 @@
 devDependencies:
   cli-select: 1.1.2
   dotenv: 8.2.0
-  playwright-chromium: 1.5.1
+  playwright-chromium: 1.5.2
   yamljs: 0.3.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
-  /@types/node/14.14.0:
+  /@types/node/14.14.6:
     dev: true
     optional: true
     resolution:
-      integrity: sha512-BfbIHP9IapdupGhq/hc+jT5dyiBVZ2DdeC5WwJWQWDb0GijQlzUFAeIQn/2GtvZcd2HVUU7An8felIICFTC2qg==
+      integrity: sha512-6QlRuqsQ/Ox/aJEQWBEJG7A9+u7oSYl3mem/K8IzxXG/kAGbV1YPD9Bg9Zw3vyxC/YP+zONKwy8hGkSt1jxFMw==
   /@types/yauzl/2.9.1:
     dependencies:
-      '@types/node': 14.14.0
+      '@types/node': 14.14.6
     dev: true
     optional: true
     resolution:
       integrity: sha512-A1b8SU4D10uoPjwb0lnHmmu8wZhR9d+9o2PKBQT2jU5YPTKsxac6M2qGAdY7VcL+dHHhARVUDmeg0rOrcd9EjA==
-  /agent-base/6.0.1:
+  /agent-base/6.0.2:
     dependencies:
       debug: 4.2.0
     dev: true
     engines:
       node: '>= 6.0.0'
     resolution:
-      integrity: sha512-01q25QQDwLSsyfhrKbn8yuur+JNw0H+0Y4JiGIKd3z9aYk/w/2kxD/Upc+t2ZBBSUNff50VjPsSW2YxM8QYKVg==
+      integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==
   /ansi-escapes/3.2.0:
     dev: true
     engines:
@@ -135,7 +135,7 @@ packages:
       integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
   /https-proxy-agent/5.0.0:
     dependencies:
-      agent-base: 6.0.1
+      agent-base: 6.0.2
       debug: 4.2.0
     dev: true
     engines:
@@ -190,7 +190,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-elfrVQpng/kRUzH89GY9XI4AelA=
-  /playwright-chromium/1.5.1:
+  /playwright-chromium/1.5.2:
     dependencies:
       debug: 4.2.0
       extract-zip: 2.0.1
@@ -208,7 +208,7 @@ packages:
       node: '>=10.17.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-vHdharsayzNllw31ysiC5Ml11m2cGleZ5SKcUzxHDAy2t8zF3W9aMwz5H1eveoSrexKgMNKrilNJZWQODZzc3g==
+      integrity: sha512-ihaA5q5xJ2b+ydRnGLrx13UKXeTAQl6mQdjeXj9k2nthnlkFeHq+qTQkbK+I3QrgsB237XEkc/a1jx+2QmkIpA==
   /pngjs/5.0.0:
     dev: true
     engines:
@@ -297,5 +297,5 @@ packages:
 specifiers:
   cli-select: ^1.1.2
   dotenv: ^8.2.0
-  playwright-chromium: ^1.5.1
+  playwright-chromium: ^1.5.2
   yamljs: ^0.3.0
