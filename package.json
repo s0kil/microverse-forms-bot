@@ -7,7 +7,7 @@
   "devDependencies": {
     "cli-select": "^1.1.2",
     "dotenv": "^8.2.0",
-    "playwright-chromium": "^1.6.1",
+    "playwright-chromium": "^1.7.1",
     "yamljs": "^0.3.0"
   }
 }
